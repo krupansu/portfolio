@@ -16,12 +16,11 @@
             <a href="#skills">Skills</a>
             <a href="#certifications">Certifications</a>
         </div>
-    </nav>
-
-            <!-- Hamburger Icon -->
+        <!-- Hamburger Icon -->
         <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()">
             &#9776; <!-- Unicode character for hamburger icon -->
         </div>
+    </nav>
 
     <header id="home" class="hero">
         <img src="assets/profile-image.jpg" alt="Krupansu Prajapati" class="profile-image">
@@ -148,11 +147,20 @@
         <p>&copy; 2025 Krupansu Prajapati. All rights reserved.</p>
     </footer>
 
-     <script>
+<script>
         function toggleMenu() {
             const menu = document.querySelector('.nav-content');
             menu.classList.toggle('active');  // Toggles the 'active' class to show or hide the menu
         }
+
+        // Close the menu when a menu item is clicked
+        const menuItems = document.querySelectorAll('nav a');
+        menuItems.forEach(item => {
+            item.addEventListener('click', () => {
+                const menu = document.querySelector('.nav-content');
+                menu.classList.remove('active');  // Remove the 'active' class to hide the menu
+            });
+        });
     </script>
     
 </body>
