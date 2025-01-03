@@ -51,7 +51,7 @@
             transform: rotate(45deg);
         }
 
-        .hero {
+     .hero {
             background-color: #2563eb;
             color: white;
             text-align: center;
@@ -74,6 +74,14 @@
             color: white;
             text-decoration: none;
             margin: 0 1rem;
+        }
+
+        /* For smaller screens, split contact info into separate lines */
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+            align-items: center;
         }
 
         .section {
@@ -173,18 +181,22 @@
 
         @media (max-width: 768px) {
             .nav-content {
-                display: none;  /* Hide the navigation links */
                 flex-direction: column;
                 align-items: center;
                 gap: 1rem;
+                display: none; /* Hide the menu by default on small screens */
             }
 
             .hamburger-menu {
-                display: block;
+                display: block; /* Show hamburger menu on smaller screens */
+                position: absolute;
+                top: 1.5rem;
+                left: 50%;
+                transform: translateX(-50%);
             }
 
-            /* When menu is active, show the links */
             .nav-content.active {
-                display: flex;
+                display: flex; /* Show the menu when the 'active' class is added */
             }
         }
+
