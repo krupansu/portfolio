@@ -1,4 +1,4 @@
-        * {
+         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
@@ -44,6 +44,11 @@
             cursor: pointer;
             font-size: 2rem;
             color: white;
+            transition: transform 0.3s ease;
+        }
+
+        .hamburger-menu.open {
+            transform: rotate(45deg);
         }
 
         .hero {
