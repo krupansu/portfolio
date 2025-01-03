@@ -192,7 +192,7 @@
             .hamburger-menu {
                 display: block; /* Show hamburger menu on smaller screens */
                 position: absolute;
-                top: 1.5rem;
+                top: 1rem;  /* Keep hamburger at the top */
                 left: 50%;
                 transform: translateX(-50%);
             }
@@ -200,5 +200,15 @@
             .nav-content.active {
                 display: flex; /* Show the menu when the 'active' class is added */
             }
-        }
 
+            .contact-info {
+                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
+                align-items: center;
+            }
+
+            .hero {
+                padding-top: 12rem;
+            }
+        }
