@@ -18,6 +18,11 @@
         </div>
     </nav>
 
+            <!-- Hamburger Icon -->
+        <div class="hamburger-menu" id="hamburger-menu" onclick="toggleMenu()">
+            &#9776; <!-- Unicode character for hamburger icon -->
+        </div>
+
     <header id="home" class="hero">
         <img src="assets/profile-image.jpg" alt="Krupansu Prajapati" class="profile-image">
         <h1>Krupansu Prajapati</h1>
@@ -142,5 +147,13 @@
     <footer>
         <p>&copy; 2025 Krupansu Prajapati. All rights reserved.</p>
     </footer>
+
+     <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.nav-content');
+            menu.classList.toggle('active');  // Toggles the 'active' class to show or hide the menu
+        }
+    </script>
+    
 </body>
 </html>
